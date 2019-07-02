@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition app:constraintSetStart="@id/start"
+                app:constraintSetEnd="@id/end"
+                app:interpolator="bounce"
+                app:duration="1000">
+
+        <OnClick app:target="@id/v1"
+            />
+
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/v1"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+        </Constraint>
+        <Constraint
+            android:id="@+id/v2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#0000cc"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/v1"
+            />
+
+        <Constraint
+            android:id="@+id/v3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#cc0000"
+            app:layout_constraintTop_toBottomOf="@id/v2"
+            app:layout_constraintLeft_toRightOf="@+id/v1"
+            />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/v2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#0000cc"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/v1"
+            />
+        <Constraint
+            android:id="@+id/v3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#cc0000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            />
+        <Constraint
+            android:id="@+id/v4"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:background="#cccc00"
+            app:layout_constraintTop_toBottomOf="@id/v1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+    </ConstraintSet>
+
+</MotionScene>

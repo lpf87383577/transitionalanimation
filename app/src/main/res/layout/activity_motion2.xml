@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.motion.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/motion2"
+    tools:context=".Motion2Activity">
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    </View>
+    <View
+        android:id="@+id/v2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#0000cc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/v1"
+        />
+
+    <View
+        android:id="@+id/v3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#cc0000"
+        app:layout_constraintTop_toBottomOf="@id/v2"
+        app:layout_constraintLeft_toRightOf="@+id/v1"
+        />
+
+
+
+</android.support.constraint.motion.MotionLayout>
